@@ -1,0 +1,142 @@
+{
+  "configuracion": {
+    "archivo": "datasets/departamentos_2020.csv",
+    "salida": "resultados",
+    "run_id": "departamentos_2020",
+    "cuantil": 0.75,
+    "semilla": 42,
+    "folds": 3,
+    "umbral_usd": 235000.0,
+    "regla_clase": "precio_usd > umbral_usd",
+    "features": [
+      "superficie",
+      "ambientes",
+      "barrio"
+    ],
+    "modelo_elegido": "logistica",
+    "criterio_seleccion": "Mayor F1 medio en validación cruzada agrupada",
+    "parametros_modelo": {
+      "modelo__C": 10.0,
+      "modelo__class_weight": "balanced"
+    },
+    "versiones": {
+      "pandas": "3.0.2",
+      "numpy": "2.4.4",
+      "scikit-learn": "1.8.0",
+      "matplotlib": "3.10.8",
+      "joblib": "1.5.3"
+    },
+    "sha256_dataset": "44b87373b216236c2465202566512db44cc9789f92466a2fcdb3049de27d12cb"
+  },
+  "limpieza": {
+    "filas_originales": 156258,
+    "duplicados_exactos_eliminados": 205,
+    "precios_invalidos_eliminados": 0,
+    "superficie_invalidos_a_faltante": 18,
+    "ambientes_invalidos_a_faltante": 29,
+    "direcciones_faltantes_eliminadas": 0,
+    "barrios_faltantes": 10,
+    "filas_limpias": 156053,
+    "grupos_direccion": 36919
+  },
+  "entrenamiento": {
+    "filas": 124576,
+    "grupos": 29535,
+    "proporcion_alto": 0.2498073465193938
+  },
+  "prueba": {
+    "filas": 31477,
+    "grupos": 7384,
+    "proporcion_alto": 0.2491660577564571
+  },
+  "grupos_compartidos": 0,
+  "comparacion": [
+    {
+      "modelo": "base",
+      "parametros": {},
+      "accuracy_cv_mean": 0.7501926535774315,
+      "accuracy_cv_std": 4.919364301439836e-06,
+      "precision_cv_mean": 0.0,
+      "precision_cv_std": 0.0,
+      "recall_cv_mean": 0.0,
+      "recall_cv_std": 0.0,
+      "f1_cv_mean": 0.0,
+      "f1_cv_std": 0.0,
+      "accuracy_test": 0.7508339422435429,
+      "precision_test": 0.0,
+      "recall_test": 0.0,
+      "f1_test": 0.0
+    },
+    {
+      "modelo": "logistica",
+      "parametros": {
+        "modelo__C": 10.0,
+        "modelo__class_weight": "balanced"
+      },
+      "accuracy_cv_mean": 0.8891359052238589,
+      "accuracy_cv_std": 0.001879927628208413,
+      "precision_cv_mean": 0.7317132129733244,
+      "precision_cv_std": 0.0046338099685117266,
+      "recall_cv_mean": 0.8782776016687944,
+      "recall_cv_std": 0.00202620819759555,
+      "f1_cv_mean": 0.7983144056474513,
+      "f1_cv_std": 0.0027694838576910455,
+      "accuracy_test": 0.8953203926676621,
+      "precision_test": 0.7424824056301983,
+      "recall_test": 0.8877980364656382,
+      "f1_test": 0.8086638406596597
+    },
+    {
+      "modelo": "random_forest",
+      "parametros": {
+        "modelo__max_depth": null,
+        "modelo__min_samples_leaf": 20
+      },
+      "accuracy_cv_mean": 0.8993786745860547,
+      "accuracy_cv_std": 0.0010396253303289955,
+      "precision_cv_mean": 0.8203580870125138,
+      "precision_cv_std": 0.002205056316155558,
+      "recall_cv_mean": 0.7646527813129365,
+      "recall_cv_std": 0.0038507803911929763,
+      "f1_cv_mean": 0.7915208518353,
+      "f1_cv_std": 0.0024234139390059994,
+      "accuracy_test": 0.9057406995584077,
+      "precision_test": 0.8353507565337002,
+      "recall_test": 0.7743210506183859,
+      "f1_test": 0.8036789518957189
+    }
+  ],
+  "matrices_confusion": {
+    "base": [
+      [
+        23634,
+        0
+      ],
+      [
+        7843,
+        0
+      ]
+    ],
+    "logistica": [
+      [
+        21219,
+        2415
+      ],
+      [
+        880,
+        6963
+      ]
+    ],
+    "random_forest": [
+      [
+        22437,
+        1197
+      ],
+      [
+        1770,
+        6073
+      ]
+    ]
+  },
+  "duracion_segundos": 39.32
+}
