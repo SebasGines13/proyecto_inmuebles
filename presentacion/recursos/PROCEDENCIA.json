@@ -1,0 +1,29 @@
+{
+  "caba_editorial.png": {
+    "tipo": "Ilustración generada con IA",
+    "herramienta": "image_gen",
+    "fecha": "2026-11-09",
+    "uso": "Decoración de filminas y portada del dashboard",
+    "nota": "Inspirada en arquitectura porteña; no corresponde a publicaciones específicas del dataset."
+  },
+  "barrios.json": {
+    "fuente": "datos_limpios de SQLite, sólo particion=train",
+    "contenido": "Mediana de precio de los siete barrios con mayor cantidad de avisos de entrenamiento"
+  },
+  "interior_departamento.png": {
+    "tipo": "Ilustración generada con IA",
+    "herramienta": "image_gen",
+    "fecha": "2026-11-09",
+    "uso": "Imagen temática para la presentación; no representa una publicación real"
+  },
+  "logo_universidad.png": {
+    "tipo": "Logo proporcionado por el usuario",
+    "uso": "Identidad de la universidad y del equipo Los Outliers",
+    "nota": "Archivo original incorporado sin modificar"
+  },
+  "logo_los_outliers.png": {
+    "tipo": "Logo proporcionado por el usuario",
+    "uso": "Identidad de la universidad y del equipo Los Outliers",
+    "nota": "Archivo original incorporado sin modificar"
+  }
+}
